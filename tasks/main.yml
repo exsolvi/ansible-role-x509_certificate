@@ -90,3 +90,6 @@
   with_items: "{{ x509_certificate_absent }}"
   when:
     - "'secret' in item"
+
+- name: Update CA certificates
+  ansible.builtin.command: /usr/sbin/update-ca-certificates
